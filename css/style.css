@@ -1,0 +1,130 @@
+
+body {
+ background: url(../img/fondo_inicio.png);
+ background-size: cover;
+ width:750px;
+ margin:0 auto;
+ font-family:'Segoe UI', Arial, sans-serif;
+}
+.box-principal{
+  background-color: #D79771 ;
+  padding: 8rem;
+  border-radius: 5%;
+}
+.box-principal h1, h2{
+  text-align: center;
+}
+.small{
+  text-align: justify;
+}
+#clear {
+  clear: both;
+}
+#logo{
+ display: block;
+ margin: 0 auto;
+ width: 180px;
+ border-radius: 50%;
+ margin-top: 30px;
+}
+
+#nav {
+    width:100%;
+    margin:0 auto;
+    margin-top: 100px;
+    list-style:none;
+    }
+    #nav li {
+    float:left;
+    width: 30%;
+    }
+    #nav a {
+    display:block;
+    text-align:center;
+    width:100%; /* fixed width */
+    height: 70px;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration:none;
+}
+
+footer {
+  color: black;
+  background-color: #D79771;
+  padding-top: 3em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 5%;
+}
+
+.registro-box {
+  
+    background-color:#D79771;
+    color:blanchedalmond;
+    top: 50%;
+    left: 50%;
+    /*position: absolute;*/
+    /*transform: translate(-50%, -50%);*/
+    box-sizing: border-box;
+    padding:70px;
+    border-radius: 10%;
+}
+.registro-box h1 {
+  margin: 0;
+  padding: 0 0 30px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.registro-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+}
+.registro-box input {
+  width: 100%;
+  margin-bottom: 12px;
+  color:rgb(0, 0, 0);
+}
+
+.registro-box input[type="text"],
+.registro-box input[type="password"],
+.registro-box input[type="email"],
+.registro-box input[type="date"]
+  {
+  border: 1px #000 solid;
+  background-color:cornsilk;
+  outline: none;
+  height: 40px;
+  color: #000;
+  font-size: 17px;
+}
+
+.registro-box input[type="submit"]  {
+ height: 45px;
+ font-size: 18px;
+ background-color:blanchedalmond;
+ border-radius: 20px;
+}
+.registro-box a  {
+ text-decoration: none;
+ font-size: 18px;
+ line-height: 20px;
+ color:rgb(0, 0, 0);
+}
+
+.registro-box a:hover  {
+ color:aliceblue;
+}
+
+form label, input{
+  display: block;
+}
