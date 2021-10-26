@@ -15,8 +15,8 @@
   <!--menú de la pagina inicial-->
 <div class="container-md bg-dark">
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-     <a class="navbar-brand" href="index.html">
-       <img src="img/logo_dpto2.png" alt="Logo" style="width:50px;" class="rounded-pill">
+     <a class="navbar-brand" href="./index.html">
+       <img src="./img/logo_dpto.png" alt="Logo" style="width:50px;" class="rounded-pill">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuColapsable">
       <span class="navbar-toggler-icon"></span>
@@ -24,16 +24,16 @@
     <div class="collapse navbar-collapse" id="menuColapsable">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">Inicio</a>
+          <a class="nav-link active" href="./index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="register.html">Registrarse</a>
+          <a class="nav-link" href="./pages/register.html">Registrarse</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contacto.html">Contacto</a>
+          <a class="nav-link" href="./pages/contacto.html">Contacto</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-outline-success" href="login.html">Acceder</a>
+            <a class="btn btn-outline-success" href="./pages/login.html">Acceder</a>
         </li>
       </ul>
     </div>
@@ -43,12 +43,44 @@
  <section class="box-principal">
    <div class="container-sm">
   <h1 >"Tu departamento, al alcance de tu mano"</h1>
-  <h2> Nosotros somos Gaela</h2>
+  <div>
+    <img src="./img/fondo_buscador.jpg" class="d-block w-100 busquedasobrecarrousel" alt="...">
 
-  <p class="small">
-    Qué bueno tenerte por acá! Ya nos conocemos? Nos presentamos... Somos Gaela. Un equipo de personas que trabaja para transformar tus necesidades en buenas decisiones. Trabajamos para acompañarte en el momento en que decidís irte a vivir solo y necesitas conseguir ese departamento ideal para vos, o para que por fin te mudes a la casa que soñás junto a tu familia y también estar con vos en ese desafío de inaugurar tu local con tu proyecto personal u oficina comercial. Sabemos que son decisiones a veces difíciles pero estamos acá para sacarte las dudas y arrancar con esa decisión inmobiliaria que tenés en mente. Sabemos cómo ayudarte en el proceso. te acompañamos para que esas decisiones inmobiliarias sean las mejores y más acertadas. Dejanos trabajar a nosotros y confianos tus dudas para encontrar ese inmueble ideal para tu proyecto, Estamos seguros de estar a la altura de tus expectativas. Hacé buenos negocios y formá parte de ésta familia.
-  </p>
+    <form>
+      <label for="usuario">Nombre de Usuario</label>
+      <input type="text" placeholder="Enter Usuario" id="usuario">
+      
+      <!--CONTRASEÑA-->
+      <label for="password">Contraseña</label>
+      <input type="password" placeholder="Enter Contraseña" id="password">
+    </form>
+    
+  </img>
+</div>
+ 
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./img/fondo_inicio.png" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/logo_dpto.png" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/fondo_buscador.jpg" class="d-block w-50" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </section>
+
 </div>
 <footer>
   <div class="container-sm bg-dark text-white p-4">
@@ -77,7 +109,7 @@
       </div>
       <div class="col-sm-8">
         <h6>Nos presentamos</h6>
-        <p class="text-secondary">Somos Gaela. Un equipo de personas que trabaja para transformar tus necesidades en buenas decisiones. Trabajamos para acompañarte en el momento en que decidís irte a vivir solo y necesitas conseguir ese departamento ideal para vos, o para que por fin te mudes a la casa que soñás junto a tu familia y también estar con vos en ese desafío de inaugurar tu local con tu proyecto personal u oficina comercial. Sabemos que son decisiones a veces difíciles pero estamos acá para sacarte las dudas y arrancar con esa decisión inmobiliaria que tenés en mente. Sabemos cómo ayudarte en el proceso. te acompañamos para que esas decisiones inmobiliarias sean las mejores y más acertadas. Dejanos trabajar a nosotros y confianos tus dudas para encontrar ese inmueble ideal para tu proyecto, Estamos seguros de estar a la altura de tus expectativas. Hacé buenos negocios y formá parte de ésta familia.
+        <!-- <p class="text-secondary">Somos Gaela. Un equipo de personas que trabaja para transformar tus necesidades en buenas decisiones. Trabajamos para acompañarte en el momento en que decidís irte a vivir solo y necesitas conseguir ese departamento ideal para vos, o para que por fin te mudes a la casa que soñás junto a tu familia y también estar con vos en ese desafío de inaugurar tu local con tu proyecto personal u oficina comercial. Sabemos que son decisiones a veces difíciles pero estamos acá para sacarte las dudas y arrancar con esa decisión inmobiliaria que tenés en mente. Sabemos cómo ayudarte en el proceso. te acompañamos para que esas decisiones inmobiliarias sean las mejores y más acertadas. Dejanos trabajar a nosotros y confianos tus dudas para encontrar ese inmueble ideal para tu proyecto, Estamos seguros de estar a la altura de tus expectativas. Hacé buenos negocios y formá parte de ésta familia. -->
         </p>
       </div>
     </div>
