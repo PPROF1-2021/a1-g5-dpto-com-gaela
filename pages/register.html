@@ -9,13 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/redes_sociales/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <title>tudepto.com-registro</title>
+    <title>Registrate</title>
 </head>
 <body>
   <div class="container-md bg-dark">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/logo_dpto2.png" alt="Logo" style="width:50px;" class="rounded-pill">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../img/logo_dpto2.png" alt="Logo" style="width:50px;" class="rounded-pill">
      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuColapsable">
         <span class="navbar-toggler-icon"></span>
@@ -23,90 +23,91 @@
       <div class="collapse navbar-collapse" id="menuColapsable">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="register.html">Registrarse</a>
+            <a class="nav-link active" href="./nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
-              <a class="btn btn-outline-success" href="login.html">Acceder</a>
+              <a class="btn btn-outline-success" href="./login.html">Ingresar</a>
+          </li>
+          <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="./register.html">Registrate</a>
           </li>
         </ul>
       </div>
       </nav>
   </div>
-
-     <section >
-        <div class="container-sm">
-        <form>
-            <!--USUARIO-->
-            <label for="nombre">Nombre de Usuario</label>
-            <input type="text" placeholder="Ingrese usuario" id="nombre">
-
-            <label for="apellido">Apellido</label>
-            <input type="text" placeholder="Ingrese apellido" id="apellido">
-
-            <label for="fecha-nac">Fecha de nacimiento</label>
-            <input type="date" placeholder="Ingrese fecha de nacimiento" id="fecha-nac">
-
-            <label for="localidad">Localidad</label>
-            <input type="text" placeholder="Ingrese localidad" id="localidad">
-
-            <label for="email">E-mail</label>
-            <input type="email" placeholder="Ingrese email" id="email">
-
-
-            <!--CONTRASEÑA-->
-            <label for="contraseña">Contraseña</label>
-            <input type="password" placeholder="Ingrese contraseña" id="contraseña">
-
-            <label for="contraseña-val">Repita la contraseña</label>
-            <input type="password" placeholder="Repita contraseña" id="contraseña-val">
-
-            <input type="submit" value="Iniciar Sesión">
-
-
-
-
-        </form>
+  <h1 class="col-lg-12 col-xs-12 d-flex justify-content-center mt-5" data-aos="fade-down">Registrate</h1>
+  <section class="row d-flex justify-content-center">
+    <img class="col-lg-6" width="90%" height="90%" src="../img/fondo_buscador.jpg"
+      alt="Imagen de Edificio en el inicio de sesion" data-aos="zoom-out">
+    <div class="col-lg-3 section__p--posicion" data-aos="fade-left">
+      <form class="form-control form-control-sm" >
+        <div class="mb-3 mt-3 ">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control"placeholder="Nombre">
         </div>
-
-     </section>
+        <div class="mb-3 mt-3 ">
+          <label for="apellido">Apellido:</label>
+          <input type="text" class="form-control" id="email" placeholder="Apellido">
+        </div>
+        <div class="mb-3">
+          <label for="email">Contraseña:</label>
+          <input type="email" class="form-control" placeholder="Correo Electrónico">
+        </div>
+        <div class="mb-3">
+          <label>Contraseña:</label>
+          <input type="text" class="form-control" placeholder="Repita Correo Electrónico">
+        </div>
+        <div class="mb-3">
+          <label>Contraseña:</label>
+          <input type="password" class="form-control" placeholder="Contraseña">
+        </div>
+        <div class="mb-3">
+          <label for="pwd">Contraseña:</label>
+          <input type="password" class="form-control" placeholder="Repita Contraseña">
+        </div>
+        
+        <button type="submit" class="btn btn-outline-secondary">Registrate</button>
+      </form>
+    </div>
+  </section>
      <footer>
-       <div class="container-sm bg-dark text-white p-4">
-         <div class="row">
-           <div class="col-sm-4 text-center">
-             <h6>Contacto</h6>
-               <span class="nav-link text-secondary">Tel: 3514558024</span>
-               <a class="nav-link text-secondary" href="mailto:asistencia@dpto.com">asistencia@dpto.com</a>
-             <ul class="nav justify-content-center">
-               <li class="nav-item">
-
-               </li>
-               <li class="nav-item">
-
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link text-secondary" href="#"><span class="icono-facebook2"></span></a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link text-secondary" href="#"><span class="icono-instagram"></span></a>
-               </li>
-               <li class="nav-item ">
-                 <a class="nav-link text-secondary" href="#"><span class="icono-twitter"></span></a>
-               </li>
-             </ul>
-           </div>
-           <div class="col-sm-8">
-             <h6>Nos presentamos</h6>
-             <p class="text-secondary">Somos Gaela. Un equipo de personas que trabaja para transformar tus necesidades en buenas decisiones. Trabajamos para acompañarte en el momento en que decidís irte a vivir solo y necesitas conseguir ese departamento ideal para vos, o para que por fin te mudes a la casa que soñás junto a tu familia y también estar con vos en ese desafío de inaugurar tu local con tu proyecto personal u oficina comercial. Sabemos que son decisiones a veces difíciles pero estamos acá para sacarte las dudas y arrancar con esa decisión inmobiliaria que tenés en mente. Sabemos cómo ayudarte en el proceso. te acompañamos para que esas decisiones inmobiliarias sean las mejores y más acertadas. Dejanos trabajar a nosotros y confianos tus dudas para encontrar ese inmueble ideal para tu proyecto, Estamos seguros de estar a la altura de tus expectativas. Hacé buenos negocios y formá parte de ésta familia.
-             </p>
-           </div>
-         </div>
-       </div>
-     </footer>
+        <div class="container-sm bg-dark text-white p-4 fixed-bottom">
+          <div class="row">
+            <div class="col-sm text-center">
+              <h4>Seguinos en las redes sociales</h4>
+                
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="https://www.facebook.com/" target="_blank"><span class="icono-facebook2"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="https://www.instagram.com/" target="_blank"><span class="icono-instagram"></span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-light" href="https://www.twitter.com/" target="_blank"><span class="icono-twitter"></span></a>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="col-sm text-center">
+              <h4>¿Querés más información?</h4>
+              <div class="footer__contacto">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                  </svg>
+                  <a class=" text-light" href="mailto:asistencia@dpto.com"><span>asistencia@dpto.com</span></a>
+                  <span class="nav-link text-secondary">Tel: 3514558024</span>
+              </div>
+          </div>
+          
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

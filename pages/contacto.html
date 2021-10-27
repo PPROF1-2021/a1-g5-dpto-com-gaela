@@ -1,136 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Contacto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Contacto</title>
 </head>
+
 <body>
   <!--menú de la pagina inicial-->
-<div class="container-md bg-dark">
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="index.html">
-      <img src="../img/logo_dpto.png" alt="Logo" style="width:50px;" class="rounded-pill">
-   </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuColapsable">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menuColapsable">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../pages/register.html">Registrarse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="../pages/contacto.html">Contacto</a>
-        </li>
-        <li class="nav-item">
-            <a class="btn btn-outline-success" href="../pages/login.html">Acceder</a>
-        </li>
-      </ul>
-    </div>
-    </nav>
-</div>
-
-
-  <h1 class="d-flex justify-content-center" data-aos="fade-down" data-aos-offset="200" data-aos-duration="500">Contacto</h1>
-  <section class="row">
-    <article class="col-lg-6 col-xs-12 ">
-        <h2 data-aos="fade-down" data-aos-offset="200" data-aos-duration="500">Mantengámonos en contacto, ¡tenemos muchos servicios para vos!</h2>
-        <form action="enviar.php" method="post" data-aos="zoom-out">
-            <div class="form-group row">
-                <div class="col-sm-10 mt-1">
-                    <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10 mt-1">
-                    <input type="email" class="form-control" placeholder="Correo electrónico" name="email" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10 mt-1">
-                    <input type="text" class="form-control" placeholder="Teléfono" name="telefono" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10 mt-1">
-                    <select class="custom-select" multiple>
-                        <option selected>Quiero más información sobre</option>
-                        <option value="Lo nuevo en alquileres">Lo nuevo en alquileres</option>
-                        <option value="Recorriendo Recoleta"></option>Recorriendo mi barrio</option>
-                        <option value="Otro">Otro</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10 mt-1">
-                    <textarea class="form-control" placeholder="Mensaje" required name="mensaje"></textarea>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <div>
-                        <input type="checkbox">
-                        <label>Acepto suscribirme al newsletter</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-secondary" value="Enviar">Enviar</button>
-                </div>
-            </div>
-        </form>
-    </article>
-    <aside class="col-lg-6 col-xs-12" data-aos="fade-left" data-aos-offset="500" data-aos-duration="700">
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-            </svg>
-          
-        </div>
-        <div >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-            </svg>
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.06049739709!2d-64.26455557405505!3d-31.399434069087317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1635277231379!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.68168877432!2d-58.573383207134555!3d-34.615743688997895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1620151240431!5m2!1ses-419!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" class="aside__iframeMap"></iframe> -->
-    </aside>
-</section>
-<footer>
-  <div class="container-sm bg-dark text-white p-4">
-    <div class="row">
-      <div class="col-sm-4">
-        <h6>Redes sociales</h6>
-        <ul class="nav flex-column">
+  <div class="container-md bg-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../img/logo_dpto.png" alt="Logo" style="width:50px;" class="rounded-pill">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuColapsable">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuColapsable">
+        <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="#">Instagram</a>
+            <a class="nav-link" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="#">Facebook</a>
+              <a class="nav-link" href="./nosotros.html">Nosotros</a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link text-secondary" href="#">Twiter</a>
+          <li class="nav-item">
+            <a class="nav-link active" href="../pages/contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+              <a class="btn btn-outline-success" href="./login.html">Ingresar</a>
+          </li>
+          <li class="nav-item">
+              <a class="btn btn-outline-secondary" href="./register.html">Registrate</a>
           </li>
         </ul>
       </div>
-      <div class="col-sm-8">
-        <h6>Nos presentamos</h6>
-        <p class="text-secondary">Somos Gaela. Un equipo de personas que trabaja para transformar tus necesidades en buenas decisiones. Trabajamos para acompañarte en el momento en que decidís irte a vivir solo y necesitas conseguir ese departamento ideal para vos, o para que por fin te mudes a la casa que soñás junto a tu familia y también estar con vos en ese desafío de inaugurar tu local con tu proyecto personal u oficina comercial. Sabemos que son decisiones a veces difíciles pero estamos acá para sacarte las dudas y arrancar con esa decisión inmobiliaria que tenés en mente. Sabemos cómo ayudarte en el proceso. te acompañamos para que esas decisiones inmobiliarias sean las mejores y más acertadas. Dejanos trabajar a nosotros y confianos tus dudas para encontrar ese inmueble ideal para tu proyecto, Estamos seguros de estar a la altura de tus expectativas. Hacé buenos negocios y formá parte de ésta familia.
-        </p>
+    </nav>
+  </div>
+
+
+  <h1 class="d-flex justify-content-center" data-aos="fade-down" data-aos-offset="200" data-aos-duration="500">
+    Mantengámonos en contacto, ¡tenemos muchos
+    servicios para vos!
+  </h1>
+  <section class="row">
+    <div class="col-lg-6 d-flex justify-content-center mt-5">
+      <form data-aos="zoom-out">
+        <div class="form-group row">
+          <input type="text" class="form-control mt-1" placeholder="Nombre" name="nombre" required>
+        </div>
+        <div class="form-group row">
+          <input type="email" class="form-control mt-1" placeholder="Correo electrónico" name="email" required>
+        </div>
+        <div class="form-group row">
+          <input type="text" class="form-control mt-1" placeholder="Teléfono" name="telefono" required>
+        </div>
+        <div class="form-group row">
+          <select class="custom-select mt-1" multiple>
+            <option selected>Quiero más información sobre</option>
+            <option value="Lo nuevo en alquileres">Lo nuevo en alquileres</option>
+            <option value="Recorriendo mi barrio"></option>Recorriendo mi barrio</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group row">
+          <textarea class="form-control mt-1" placeholder="Mensaje" required name="mensaje"></textarea>
+        </div>
+        <div class="form-group row">
+          <div class="mt-1">
+            <input type="checkbox">
+            <label>Acepto suscribirme al newsletter</label>
+          </div>
+        </div>
+        <div class="form-group mt-2">
+
+          <button type="submit" class="btn btn-secondary" value="Enviar">Enviar</button>
+
+        </div>
+      </form>
+    </div>
+
+
+    <aside class="col-lg-6" data-aos="fade-left" data-aos-offset="500" data-aos-duration="700">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+        </svg>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt-fill"
+          viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+        </svg>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.06049739709!2d-64.26455557405505!3d-31.399434069087317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1635277231379!5m2!1ses!2sar"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.68168877432!2d-58.573383207134555!3d-34.615743688997895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1620151240431!5m2!1ses-419!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" class="aside__iframeMap"></iframe> -->
+    </aside>
+  </section>
+  <footer>
+    <div class="container-sm bg-dark text-white p-4 fixed-bottom">
+      <div class="row">
+        <div class="col-sm text-center">
+          <h4>Seguinos en las redes sociales</h4>
+
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.facebook.com/" target="_blank"><span
+                  class="icono-facebook2"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="https://www.instagram.com/" target="_blank"><span
+                  class="icono-instagram"></span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-light" href="https://www.twitter.com/" target="_blank"><span
+                  class="icono-twitter"></span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm text-center">
+          <h4>¿Querés más información?</h4>
+          <div class="footer__contacto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+            </svg>
+            <a class=" text-light" href="mailto:asistencia@dpto.com"><span>asistencia@dpto.com</span></a>
+            <span class="nav-link text-secondary">Tel: 3514558024</span>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
+
 </html>
