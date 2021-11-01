@@ -3,4 +3,4 @@
 
 ### Sitio WEB
 
-https://pprof1-2021.github.io/a1-g5-dpto-com-gaela/pages/register.html
+https://pprof1-2021.github.io/a1-g5-dpto-com-gaela/index.html
