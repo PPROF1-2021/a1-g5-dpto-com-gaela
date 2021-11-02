@@ -1,3 +1,14 @@
 #frase-index {
   font-family: 'Noto Serif Display', serif;
 }
+#fondo {
+  background-image: url('../img/Nueva_Córdoba_1-B-N.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#buscador {
+    height: 100vh;
+}
