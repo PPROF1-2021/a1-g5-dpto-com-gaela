@@ -11,6 +11,13 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="../img/favicon.png" type="image/png" />
   <link href="../css/redes_sociales/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
   <title>Contacto</title>
@@ -83,13 +90,35 @@
           </div>
         </div>
         <div class="form-group mt-2">
-
-          <button type="submit" class="btn btn-secondary" value="Enviar">Enviar</button>
-
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Enviar</button>
         </div>
       </form>
     </div>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body"><div class="alert alert-success">
+              <i class="material-icons">&#xE876;</i>
+              <strong>Se ha suscripto correctamente!</strong>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
 
     <aside class="col-lg-6" data-aos="fade-left" data-aos-offset="500" data-aos-duration="700">
       <div>

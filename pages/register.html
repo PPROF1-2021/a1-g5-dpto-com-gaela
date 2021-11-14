@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/redes_sociales/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/funcionesGrupo99.js"></script>
     <title>Registrate</title>
 </head>
 <body>
@@ -50,33 +51,37 @@
     <img class="col-lg-6" width="90%" height="90%" src="../img/fondo_buscador.jpg"
       alt="Imagen de Edificio en el inicio de sesion" data-aos="zoom-out">
     <div class="col-lg-3 section__p--posicion" data-aos="fade-left">
-      <form class="form-control form-control-sm" >
+      <form id="formRegister" class="form-control form-control-sm" >
         <div class="mb-3 mt-3 ">
           <label for="nombre">Nombre:</label>
-          <input type="text" class="form-control"placeholder="Nombre">
+          <input type="text" class="form-control"placeholder="Nombre"  minlength="3" id="Nombre" required>
         </div>
         <div class="mb-3 mt-3 ">
           <label for="apellido">Apellido:</label>
-          <input type="text" class="form-control" id="email" placeholder="Apellido">
+          <input type="text" class="form-control"  placeholder="Apellido"  minlength="3" id="Apellido" required>
+        </div>
+        <div class="mb-3 mt-3 ">
+          <label for="fechanac">Fecha de Nacimiento:</label>
+          <input type="date" class="form-control"  placeholder="Fecha de Nacimiento"  minlength="3" id="FechaNac" required>
         </div>
         <div class="mb-3">
-          <label for="email">Contraseña:</label>
-          <input type="email" class="form-control" placeholder="Correo Electrónico">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control"  placeholder="Correo Electrónico"  id="Email" required>
+        </div>
+        <div class="mb-3">
+          <label>Repita Email:</label>
+          <input type="text" class="form-control"  placeholder="Repita Correo Electrónico" id="Email2" required>
         </div>
         <div class="mb-3">
           <label>Contraseña:</label>
-          <input type="text" class="form-control" placeholder="Repita Correo Electrónico">
-        </div>
-        <div class="mb-3">
-          <label>Contraseña:</label>
-          <input type="password" class="form-control" placeholder="Contraseña">
+          <input type="password" class="form-control" placeholder="Contraseña"  minlength="5" id="Contraseña" required>
         </div>
         <div class="mb-3">
           <label for="pwd">Contraseña:</label>
-          <input type="password" class="form-control" placeholder="Repita Contraseña">
+          <input type="password" class="form-control"  placeholder="Repita Contraseña"  minlength="5" id="Contraseña2" required>
         </div>
 
-        <button type="submit" class="btn btn-outline-secondary">Registrate</button>
+        <button type="submit" class="btn btn-outline-secondary" onclick="Register()">Registrate</button>
       </form>
     </div>
   </section>
