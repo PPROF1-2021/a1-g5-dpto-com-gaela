@@ -7,7 +7,9 @@ function Register()
         localStorage.setItem("nombre", document.getElementById("Nombre").value);
         localStorage.setItem("apellido", document.getElementById("Apellido").value);
         localStorage.setItem("fechanac", document.getElementById("FechaNac").value);
-        window.location.replace("/Users/negra/Documents/ISPC/2021/Practicas/a1-g5-dpto-com-gaela/pages/success.html");
+        document.getElementById("formRegister").submit();
+        window.location.replace("success.html");
+
 }
 //alert cuando no son iguales los emails
 function sameEmail() {
@@ -26,7 +28,16 @@ function samePassword() {
     }
 }
 // calculo de edad
-
+function calcularEdad(fecha) {
+    var hoy = new Date();
+    var cumpleanos = new Date(fecha);
+    var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+    var dif = hoy.getMonth() - cumpleanos.getMonth();
+    if (dif < 0 || (dif === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        edad--;
+    }
+    return edad;
+}
 
 //voy llenando mi li con mis datos
 function readDataRegister() {
@@ -35,10 +46,16 @@ function readDataRegister() {
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(localStorage.getItem(localStorage.key(i))));
         ul.appendChild(li);
-        
     }
+
+    var fechNac = new Date(localStorage.getItem("fechanac"));
+    var edad = calcularEdad(fechNac);
+    liEdad = document.createElement("li");
+    liEdad.appendChild(document.createTextNode("Edad: " + edad));
+    ul.appendChild(liEdad);
+
     setTimeout(function() {
         localStorage.clear();
-        window.location.replace("/Users/negra/Documents/ISPC/2021/Practicas/a1-g5-dpto-com-gaela/index.html");
+        window.location.replace("../index.html");
     }, 6000);
   }
