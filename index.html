@@ -16,6 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/redes_sociales/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/funcionesGrupo99.js"></script>
     <title>Inicio</title>
 </head>
 <body >
@@ -58,6 +59,15 @@
     <form class="form-inline">
         <input type="text" class="form-control form-control-lg mr-sm-2" id="inlineFormInputName2" placeholder="Buscar">
         <label class="sr-only" for="inlineFormInputGroupUsername2"></label>
+        <span style="color:#FFF" onclick="masOpciones()">mas..</span>
+        <div class="container" id="oculto">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Seleccione número de ambientes</option>
+          <option value="1">Uno</option>
+          <option value="2">Dos</option>
+          <option value="3">Tres</option>
+        </select>
+      </div>
         <div class="input-group mr-sm-2">
         </div>
         <button type="submit" class="btn btn-lg btn-success">Buscar</button>
