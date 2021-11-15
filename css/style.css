@@ -9,11 +9,20 @@
   background-repeat: no-repeat;
 }
 
+#sumario {
+  padding: 10px;
+  background-image: url('../img/sumario-img.jpg');
+  height: 1024px;
+  width: 768px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #buscador {
     height: 100vh;
 }
 
-.modal-confirm {		
+.modal-confirm {
 	color: #434e65;
 	width: 525px;
 }
@@ -25,7 +34,7 @@
 }
 .modal-confirm .modal-header {
 	background: #47c9a2;
-	border-bottom: none;   
+	border-bottom: none;
 	position: relative;
 	text-align: center;
 	margin: -20px -20px 0;
@@ -39,7 +48,7 @@
 }
 .modal-confirm .form-control, .modal-confirm .btn {
 	min-height: 40px;
-	border-radius: 3px; 
+	border-radius: 3px;
 }
 .modal-confirm .close {
 	position: absolute;
@@ -53,7 +62,7 @@
 	opacity: 0.8;
 }
 .modal-confirm .icon-box {
-	color: #fff;		
+	color: #fff;
 	width: 95px;
 	height: 95px;
 	display: inline-block;
