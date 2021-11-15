@@ -59,3 +59,8 @@ function readDataRegister() {
         window.location.replace("../index.html");
     }, 6000);
   }
+
+//Funcion mas opciones en buscador
+function masOpciones() {
+  document.getElementById("oculto").style.display = "block";
+}

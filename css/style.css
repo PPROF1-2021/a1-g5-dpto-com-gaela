@@ -22,6 +22,11 @@
     height: 100vh;
 }
 
+#oculto {
+  display: none;
+  margin-bottom: 1.5em;
+}
+
 .modal-confirm {
 	color: #434e65;
 	width: 525px;
