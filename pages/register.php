@@ -1,3 +1,48 @@
+<?php
+include("conexion.php");
+
+//Se generan variables con la información del formulario
+if (isset($_POST["registro"])) {
+  $nombre = mysqli_real_escape_string($conexion,$_POST['nombre']);
+  $apellido = mysqli_real_escape_string($conexion,$_POST['apellido']);
+  $fechanac = mysqli_real_escape_string($conexion,$_POST['fechanac']);
+  $email = mysqli_real_escape_string($conexion,$_POST['email']);
+  $clave = mysqli_real_escape_string($conexion,$_POST['clave']);
+  //Se encripta la clave de usuario
+  $clave_enc = sha1($clave);
+  //Se genera consulta sql y se verifica si ya existe un email en la BD
+  $sql_email = "SELECT id_usuario FROM usuario WHERE email = '$email'";
+  $result_email = $conexion->query($sql_email);
+  $filas = $result_email->num_rows;
+  if ($filas > 0) {
+    echo "<script>
+      alert('El email ya está registrado');
+      window.location = 'register.php';
+    </script>";
+
+  } else {
+    //Si no existe el email se insertan los datos en la BD
+    $sql_insert = "INSERT INTO usuario(nombre,apellido,fecha_nac,email,contraseña)
+    VALUES ('$nombre','$apellido','$fechanac','$email','$clave_enc')";
+    $result_insert = $conexion->query($sql_insert);
+    //Se verifica inserción correcta
+    if ($result_insert > 0) {
+      echo "<script>
+        alert('Se ha registrado correctamente');
+        window.location = 'login.php';
+      </script>";
+    } else {
+      echo "<script>
+        alert('Error al registrarse');
+        window.location = 'register.php';
+      </script>";
+    }
+
+  }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +81,10 @@
             <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
-              <a class="btn btn-outline-success mx-1" href="./login.html">Ingresar</a>
+              <a class="btn btn-outline-success mx-1" href="./login.php">Ingresar</a>
           </li>
           <li class="nav-item">
-              <a class="btn btn-outline-secondary mx-1 active" href="./register.html">Registrate</a>
+              <a class="btn btn-outline-secondary mx-1 active" href="./register.php">Registrate</a>
           </li>
         </ul>
       </div>
@@ -51,22 +96,22 @@
     <img class="col-lg-6" width="90%" height="90%" src="../img/fondo_buscador.jpg"
       alt="Imagen de Edificio en el inicio de sesion" data-aos="zoom-out">
     <div class="col-lg-3 section__p--posicion" data-aos="fade-left">
-      <form id="formRegister" class="form-control form-control-sm" >
+      <form id="formRegister" class="form-control form-control-sm" action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
         <div class="mb-3 mt-3 ">
           <label for="nombre">Nombre:</label>
-          <input type="text" class="form-control"placeholder="Nombre"  minlength="3" id="Nombre" required>
+          <input type="text" class="form-control" placeholder="Nombre" name="nombre" minlength="3" id="Nombre" required>
         </div>
         <div class="mb-3 mt-3 ">
           <label for="apellido">Apellido:</label>
-          <input type="text" class="form-control"  placeholder="Apellido"  minlength="3" id="Apellido" required>
+          <input type="text" class="form-control"  placeholder="Apellido" name="apellido" minlength="3" id="Apellido" required>
         </div>
         <div class="mb-3 mt-3 ">
           <label for="fechanac">Fecha de Nacimiento:</label>
-          <input type="date" class="form-control"  placeholder="Fecha de Nacimiento"  minlength="3" id="FechaNac" required>
+          <input type="date" class="form-control"  placeholder="Fecha de Nacimiento" name="fechanac" minlength="3" id="FechaNac" required>
         </div>
         <div class="mb-3">
           <label for="email">Email:</label>
-          <input type="email" class="form-control"  placeholder="Correo Electrónico"  id="Email" required>
+          <input type="email" class="form-control"  placeholder="Correo Electrónico" name="email" id="Email" re quired>
         </div>
         <div class="mb-3">
           <label>Repita Email:</label>
@@ -74,14 +119,14 @@
         </div>
         <div class="mb-3">
           <label>Contraseña:</label>
-          <input type="password" class="form-control" placeholder="Contraseña"  minlength="5" id="Contraseña" required>
+          <input type="password" class="form-control" placeholder="Contraseña" name="clave" minlength="5" id="Contraseña" required>
         </div>
         <div class="mb-3">
           <label for="pwd">Contraseña:</label>
           <input type="password" class="form-control"  placeholder="Repita Contraseña"  minlength="5" id="Contraseña2" required>
         </div>
 
-        <button type="submit" class="btn btn-outline-secondary" onclick="Register()">Registrate</button>
+        <button type="submit" class="btn btn-outline-secondary" name="registro">Registrate</button>
       </form>
     </div>
   </section>

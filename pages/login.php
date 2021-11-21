@@ -1,3 +1,38 @@
+<?php
+include("conexion.php");
+session_start();
+if (isset($_SESSION['id_user'])) {
+  header("Location: admin.php");
+}
+//Se generan variables con la información del formulario
+if (isset($_POST["login"])) {
+  $email = mysqli_real_escape_string($conexion,$_POST['email']);
+  $clave = mysqli_real_escape_string($conexion,$_POST['clave']);
+
+  //Se encripta la clave de usuario
+  $clave_enc = sha1($clave);
+
+  //Se genera consulta sql y se verifica si existe en la BD
+  $sql_usuario = "SELECT id_usuario FROM usuario WHERE email = '$email' AND contraseña = '$clave_enc'";
+  $result_usuario = $conexion->query($sql_usuario);
+  $acierto = $result_usuario->num_rows;
+  //Si existe el email y la contraseña se genera una sesion y se redirige a la página de administrador
+  if ($acierto > 0) {
+
+    $fila = $result_usuario->fetch_assoc();
+    $_SESSION['id_user'] = $fila["id_usuario"];
+    header("Location: admin.php");
+  } else {
+    echo "<script>
+      alert('Usuario o clave incorrecto');
+      window.location = 'login.php';
+    </script>";
+  }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,10 +80,10 @@
            <a class="nav-link" href="./contacto.html">Contacto</a>
          </li>
          <li class="nav-item">
-             <a class="btn btn-outline-success mx-1 active" href="./login.html">Ingresar</a>
+             <a class="btn btn-outline-success mx-1 active" href="./login.php">Ingresar</a>
          </li>
          <li class="nav-item">
-             <a class="btn btn-outline-secondary mx-1" href="./register.html">Registrate</a>
+             <a class="btn btn-outline-secondary mx-1" href="./register.php">Registrate</a>
          </li>
        </ul>
      </div>
@@ -60,21 +95,16 @@
    <img class="col-lg-6 article__img--tamanio" src="../img//fondo_inicio.png"
      alt="Imagen de Edificio en el inicio de sesion" data-aos="zoom-out">
    <div class="col-lg-3 section__p--posicion" data-aos="fade-left">
-     <form>
+     <form action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
        <div class="mb-3 mt-3 ">
          <label for="email">Email:</label>
-         <input type="email" class="form-control" id="email" placeholder="Ingresar email">
+         <input type="email" class="form-control" id="email" name="email" placeholder="Ingresar email" required>
        </div>
        <div class="mb-3">
-         <label for="pwd">Contraseña:</label>
-         <input type="password" class="form-control" placeholder="Ingresar password">
+         <label for="clave">Contraseña:</label>
+         <input type="password" class="form-control" name="clave" placeholder="Ingresar password" required>
        </div>
-       <div class="form-check mb-3">
-         <label class="form-check-label">
-           <input class="form-check-input" type="checkbox"> Recordarme
-         </label>
-       </div>
-       <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">Ingresar</button>
+       <button type="submit" name="login" class="btn btn-outline-info">Ingresar</button>
      </form>
    </div>
       <!-- Modal -->
@@ -100,7 +130,7 @@
         </div>
  </section>
 </main>
-    
+
 
  <footer>
    <div class="container-fluid mt-2 bg-dark text-white p-4">
