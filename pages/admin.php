@@ -14,7 +14,8 @@ $result_usr = $conexion->query($sql_usuario);
 $lista = $result_usr->fetch_assoc();
 
 
- ?>
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +52,32 @@ $lista = $result_usr->fetch_assoc();
     <span>Email: <?php echo utf8_decode($lista['email']); ?></span>
   </li>
 </ul>
+
+<!--  Se imprimen los datos de la tabla localidad  -->
+
+<?php
+
+$sql_localidad = "SELECT * FROM localidad";
+
+if ($resultado = $conexion->query($sql_localidad)) {
+    echo "<h4>Los datos de la tabla localidad son:</h4>";
+    echo "<ul>";
+    /* obtener el array de objetos */
+    while ($fila = $resultado->fetch_row()) {
+        echo "<li>";
+        printf ("%s (%s)\n", $fila[0], $fila[1]);
+        echo "</li>";
+    }
+    echo "</ul>";
+    /* liberar el conjunto de resultados */
+    $resultado->close();
+}
+
+/* cerrar la conexión */
+$conexion->close();
+
+ ?>
+
 <a href="salir.php">Cerrar sesión</a>
 
 </body>
