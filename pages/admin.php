@@ -65,7 +65,7 @@ if ($resultado = $conexion->query($sql_localidad)) {
     /* obtener el array de objetos */
     while ($fila = $resultado->fetch_row()) {
         echo "<li>";
-        printf ("%s - Localidad: %s - Provincia: %s\n",$fila[0], $fila[1],$fila[2]);
+        printf ("%s - Localidad: %s - Provincia:  %s\n",$fila[0], $fila[1],$fila[2]);
         echo "</li>";
     }
     echo "</ul>";
